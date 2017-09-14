@@ -29,7 +29,7 @@ class certificates_form extends moodleform {
     function definition() {
         $mform =& $this->_form;
 		
-		$mform->addElement('html', '<h2>' . get_string('certificates', 'local_brookesid')  . ' (CSV)</h2>');
+		$mform->addElement('html', '<h2>' . get_string('certificates', 'local_brookesid')  . '</h2>');
 
 		$mform->addElement('date_selector', 'date_from', get_string('date_from', 'local_brookesid'));
 		$mform->addElement('date_selector', 'date_to', get_string('date_to', 'local_brookesid'));

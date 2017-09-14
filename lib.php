@@ -40,7 +40,8 @@ function local_brookesid_extend_navigation($navigation) {
 		}
 	}
 	
-	$node = $nodeParent->add(get_string('enrolled_csv', 'local_brookesid'), '/local/brookesid/enrolled_csv.php');
-	$node = $nodeParent->add(get_string('courses_csv', 'local_brookesid'), '/local/brookesid/courses_csv.php');
-	$node = $nodeParent->add(get_string('certificates', 'local_brookesid'), '/local/brookesid/certificates.php');
+	$node = $nodeParent->add(get_string('certificates_pdf', 'local_brookesid'), '/local/brookesid/certificates.php');
+	$node = $nodeParent->add(get_string('enrolled', 'local_brookesid'), '/local/brookesid/enrolled_csv.php');
+	$node = $nodeParent->add(get_string('courses', 'local_brookesid'), '/local/brookesid/courses_csv.php');
+	$node = $nodeParent->add(get_string('certificates_csv', 'local_brookesid'), '/local/brookesid/certificates_csv.php');
 }

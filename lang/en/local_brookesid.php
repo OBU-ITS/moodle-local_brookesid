@@ -25,18 +25,18 @@
 
 $string['pluginname'] = 'Brookes ID';
 
-$string['brookesid'] = 'Brookes ID';
-$string['enrolled_csv'] = 'List of students enrolled on activities';
-$string['courses_csv'] = 'List of activities and associated achievements';
-$string['certificates'] = 'Certificates report';
 
 $string['brookesid:admin'] = 'Administer Brookes ID';
 
 $string['save'] = 'Download';
 
-$string['certificates'] = 'Certificates';
+$string['brookesid'] = 'Brookes ID';
+$string['certificates_pdf'] = 'Generate certificates';
 $string['enrolled'] = 'List of students enrolled on activities';
 $string['courses'] = 'List of activities and associated achievements';
+$string['certificates_csv'] = 'Certificates report';
+
+$string['certificates'] = 'Certificates';
 $string['badges'] = 'List of achievements completed';
 
 $string['date_from'] = 'From';
