@@ -41,7 +41,7 @@ $PAGE->set_title(get_string('brookesid:admin', 'local_brookesid'));
 	
 echo $OUTPUT->header();
 
-echo '<img src="/pix/brookesid-logo.png" width="120" alt="BrookesID" style="float: right"/>
+echo '<img src="images/brookesid-logo.png" width="120" alt="BrookesID" style="float: right"/>
 <h2><strong>Brookes<span style="color: #d10373">ID</span></strong> reports and certificates</h2>
 <h3>Certificates (PDF)</h3>
  <ul>

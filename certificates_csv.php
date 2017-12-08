@@ -105,7 +105,7 @@ else if ($mform_data = $mform->get_data()) {
 }
 echo $OUTPUT->header();
 	 
-echo '<img src="/pix/brookesid-logo.png" width="120" alt="BrookesID" style="float: right"/>';
+echo '<img src="images/brookesid-logo.png" width="120" alt="BrookesID" style="float: right"/>';
 if ($message) {
     notice($message, $url);    
 }

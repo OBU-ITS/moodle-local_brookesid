@@ -115,7 +115,7 @@ if ($mform->is_cancelled()) {
 }
 
 echo $OUTPUT->header();
-echo '<img src="/pix/brookesid-logo.png" width="120" alt="BrookesID" style="float: right"/>';
+echo '<img src="images/brookesid-logo.png" width="120" alt="BrookesID" style="float: right"/>';
 
 if ($message) {
     notice($message, $url);    
@@ -147,8 +147,8 @@ function output($pdf, $studentnumber, $contact, $categories, $badges) {
 	$pdf->SetTextColor(0,0,0);
 	
 	$c = '';
-	$c .= '<p style="text-align: center"><img src="/pix/logo-brookes.png" align="center" width="100"><br>';
-	$c .= '<img src="/pix/brookesid-logo.png" align="center" width="100"></p>';
+	$c .= '<p style="text-align: center"><img src="images/logo-brookes.png" align="center" width="100"><br>';
+	$c .= '<img src="images/brookesid-logo.png" align="center" width="100"></p>';
 	$c .= '<h2 align="center">Certificate</h2>';
 	
 	$c .= '<p align="center">Awarded to</p>';
@@ -158,40 +158,40 @@ function output($pdf, $studentnumber, $contact, $categories, $badges) {
 	// row preceded by spacer cell
 	$c .= '<tr><td>&nbsp;</td><td align="center" style="border: 1px solid #f49103"><h5>Confidence</h5>';
 		if ($categories['confCount'] == 0) {
-			$c .= '<img src="/pix/spacer.gif" width="75">';
+			$c .= '<img src="images/spacer.gif" width="75">';
 		}
 		if ($categories['confCount'] == 1) {
 			$c .= '<h1><br> 1 </h1>achievement';
 		}
 		if ($categories['confCount'] == 2) {
-			$c .= '<img src="/pix/bronze.png" width="75"><br>';
+			$c .= '<img src="images/bronze.png" width="75"><br>';
 			$c .= 'Bronze award';
 		}
 		if ($categories['confCount'] >= 3 || $categories['confCount'] == 4) {
-			$c .= '<img src="/pix/silver.png" width="75"><br>';
+			$c .= '<img src="images/silver.png" width="75"><br>';
 			$c .= 'Silver award';
 		}
 		if ($categories['confCount'] == 5) {
-			$c .= '<img src="/pix/gold.png" width="75"><br>';
+			$c .= '<img src="images/gold.png" width="75"><br>';
 			$c .= 'Gold award';
 		}
 	$c .= '</td><td align="center" style="border: 1px solid #d10373"><h5>Enterprising creativity</h5>';
 		if ($categories['entcCount'] == 0) {
-			$c .= '<img src="/pix/spacer.gif" width="75">';
+			$c .= '<img src="images/spacer.gif" width="75">';
 		}
 		if ($categories['entcCount'] == 1) {
 			$c .= '<h1><br> 1 </h1>achievement';
 		}
 		if ($categories['entcCount'] == 2) {
-			$c .= '<img src="/pix/bronze.png" height="75"><br>';
+			$c .= '<img src="images/bronze.png" height="75"><br>';
 			$c .= 'Bronze award';
 		}
 		if ($categories['entcCount'] >= 3 || $categories['entcCount'] == 4) {
-			$c .= '<img src="/pix/silver.png" height="75"><br>';
+			$c .= '<img src="images/silver.png" height="75"><br>';
 			$c .= 'Silver award';
 		}
 		if ($categories['entcCount'] == 5) {
-			$c .= '<img src="/pix/gold.png" height="75"><br>';
+			$c .= '<img src="images/gold.png" height="75"><br>';
 			$c .= 'Gold award';
 		}
 	$c .= '    </td>';
@@ -199,40 +199,40 @@ function output($pdf, $studentnumber, $contact, $categories, $badges) {
 	//spacer cell on end of row
 	$c .= '    <tr><td>&nbsp;</td><td align="center" style="border: 1px solid #9eab05"><h5>Connectedness</h5>';
 		if ($categories['connCount'] == 0) {
-			$c .= '<img src="/pix/spacer.gif" width="75">';
+			$c .= '<img src="images/spacer.gif" width="75">';
 		}
 		if ($categories['connCount'] == 1) {
 			$c .= '<h1><br> 1 </h1>achievement';
 		}
 		if ($categories['connCount'] == 2) {
-			$c .= '<img src="/pix/bronze.png" height="75"><br>';
+			$c .= '<img src="images/bronze.png" height="75"><br>';
 			$c .= 'Bronze award';
 		}
 		if ($categories['connCount'] >= 3 || $categories['connCount'] == 4) {
-			$c .= '<img src="/pix/silver.png" height="75"><br>';
+			$c .= '<img src="images/silver.png" height="75"><br>';
 			$c .= 'Silver award';
 		}
 		if ($categories['connCount'] == 5) {
-			$c .= '<img src="/pix/gold.png" height="75"><br>';
+			$c .= '<img src="images/gold.png" height="75"><br>';
 			$c .= 'Gold award';
 		}
 	$c .= '</td><td align="center" style="border: 1px solid #003896"><h5>Generosity of spirit</h5>';
 		if ($categories['gensCount'] == 0) {
-			$c .= '<img src="/pix/spacer.gif" width="75">';
+			$c .= '<img src="images/spacer.gif" width="75">';
 		}
 		if ($categories['gensCount'] == 1) {
 			$c .= '<h1><br> 1 </h1>achievement';
 		}
 		if ($categories['gensCount'] == 2) {
-			$c .= '<img src="/pix/bronze.png" height="75"><br>';
+			$c .= '<img src="images/bronze.png" height="75"><br>';
 			$c .= 'Bronze award';
 		}
 		if ($categories['gensCount'] >= 3 || $categories['gensCount'] == 4) {
-			$c .= '<img src="/pix/silver.png" height="75"><br>';
+			$c .= '<img src="images/silver.png" height="75"><br>';
 			$c .= 'Silver award';
 		}
 		if ($categories['gensCount'] == 5) {
-			$c .= '<img src="/pix/gold.png" height="75"><br>';
+			$c .= '<img src="images/gold.png" height="75"><br>';
 			$c .= 'Gold award';
 		}
 		
@@ -240,12 +240,12 @@ function output($pdf, $studentnumber, $contact, $categories, $badges) {
 	$c .= '</tr>';
 	$c .= '</table>';
 	$c .= '<h3>Signed</h3>';
-	$c .= '<img src="/pix/signature.png" width="150"><br>Dr Bob Champion<br>BrookesID Co-curricular Activities Programme';
+	$c .= '<img src="images/signature.png" width="150"><br>Dr Bob Champion<br>BrookesID Co-curricular Activities Programme';
 	$c .= '<br pagebreak="true"/>';
 	
 	/* list of badges */
-	$c .= '<p style="text-align: center"><img src="/pix/logo-brookes.png" align="center" width="100"></p>';
-	$c .= '<p style="text-align: center"><img src="/pix/brookesid-logo.png" align="center" width="100"></p>';
+	$c .= '<p style="text-align: center"><img src="images/logo-brookes.png" align="center" width="100"></p>';
+	$c .= '<p style="text-align: center"><img src="images/brookesid-logo.png" align="center" width="100"></p>';
     $c .= '<h3>Achievements</h3>';
 
 	$c .= '<table border="0" cellspacing="2" cellpadding="3">';
@@ -255,16 +255,16 @@ function output($pdf, $studentnumber, $contact, $categories, $badges) {
 		$c .= '<tr><td valign="top" width="10%">';
 		switch ($badge['badge_category']) {
 				case 'CONF':
-					$c .= '<img src="/pix/confidence-logo.png" align="center" width="30">';
+					$c .= '<img src="images/confidence-logo.png" align="center" width="30">';
 					break;
 				case 'ENTC':
-					$c .= '<img src="/pix/entc-logo.png" align="center" width="30">';
+					$c .= '<img src="images/entc-logo.png" align="center" width="30">';
 					break;
 				case 'CONN':
-					$c .= '<img src="/pix/connected-logo.png" align="center" width="30">';
+					$c .= '<img src="images/connected-logo.png" align="center" width="30">';
 					break;
 				case 'GENS':
-					$c .= '<img src="/pix/gens-logo.png" align="center" width="30">';
+					$c .= '<img src="images/gens-logo.png" align="center" width="30">';
 					break;
 				default:
 					break;
@@ -293,7 +293,7 @@ function output($pdf, $studentnumber, $contact, $categories, $badges) {
 	$c .= '</tbody>';
 	$c .= '</table>';
 	$c .= '<h3>Signed</h3>';
-	$c .= '<img src="/pix/signature.png" width="150"><br>Dr Bob Champion<br>BrookesID Co-curricular Activities Programme';
+	$c .= '<img src="images/signature.png" width="150"><br>Dr Bob Champion<br>BrookesID Co-curricular Activities Programme';
 	
 	$c .= '<br pagebreak="true"/>';
 	/* transcript of badges */
@@ -313,8 +313,8 @@ function output($pdf, $studentnumber, $contact, $categories, $badges) {
 	
 	$c .= '<table border="0"  cellspacing="0" cellpadding="0">';
 	$c .= '<thead><tr>';
-	$c .= '<td style="text-align: left"><img src="/pix/logo-brookes.png" align="left" width="100"></td>';
-	$c .= '<td style="text-align: right"><img src="/pix/brookesid-logo.png" align="right" width="100"></td>';
+	$c .= '<td style="text-align: left"><img src="images/logo-brookes.png" align="left" width="100"></td>';
+	$c .= '<td style="text-align: right"><img src="images/brookesid-logo.png" align="right" width="100"></td>';
 	$c .= '</tr><tr>';
 	$c .= '<th colspan="2" style="font-size: 125%; font-weight: bold">Transcript of achievements</th>';
 	$c .= '</tr></thead><tbody>';
@@ -412,7 +412,7 @@ function output($pdf, $studentnumber, $contact, $categories, $badges) {
 	$c .= '</tbody>';
 	$c .= '</table>';
 	$c .= '<h3>Signed</h3>';
-	$c .= '<img src="/pix/signature.png" width="150"><br>Dr Bob Champion<br>BrookesID Co-curricular Activities Programme';
+	$c .= '<img src="images/signature.png" width="150"><br>Dr Bob Champion<br>BrookesID Co-curricular Activities Programme';
 
 	$pdf->writeHTML($c);
 }
