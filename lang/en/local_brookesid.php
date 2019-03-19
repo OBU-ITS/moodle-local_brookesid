@@ -19,12 +19,13 @@
  * Language strings
  *
  * @package    local_brookesid
- * @copyright  2017, Oxford Brookes University {@link http://www.brookes.ac.uk/}
+ * @copyright  2019, Oxford Brookes University {@link http://www.brookes.ac.uk/}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Brookes ID';
+$string['privacy:metadata'] = 'The Brookes ID plugin only shows data stored in other locations.';
 
+$string['pluginname'] = 'Brookes ID';
 
 $string['brookesid:admin'] = 'Administer Brookes ID';
 
