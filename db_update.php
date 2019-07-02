@@ -17,11 +17,46 @@
  * Brookes ID - db updates
  *
  * @package    local_brookesid
- * @copyright  2017, Oxford Brookes University
+ * @copyright  2019, Oxford Brookes University
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
  */
  
+function get_brookesid_course() {
+	global $DB;
+	
+	$course = $DB->get_record('course', array('idnumber' => 'SUBS_BROOKESID'), 'id', MUST_EXIST);
+	return $course->id;
+}
+
+// Check if the given user has the given role in the Brookes ID course
+function has_brookesid_role($user_id = 0, $role_id_1 = 0, $role_id_2 = 0, $role_id_3 = 0) {
+	global $DB;
+	
+	if (($user_id == 0) || ($role_id_1 == 0)) { // Both mandatory
+		return false;
+	}
+	
+	$sql = 'SELECT ue.id'
+		. ' FROM {user_enrolments} ue'
+		. ' JOIN {enrol} e ON e.id = ue.enrolid'
+		. ' JOIN {context} ct ON ct.instanceid = e.courseid'
+		. ' JOIN {role_assignments} ra ON ra.contextid = ct.id'
+		. ' JOIN {course} c ON c.id = e.courseid'
+		. ' WHERE ue.userid = ?'
+			. ' AND e.enrol = "manual"'
+			. ' AND ct.contextlevel = 50'
+			. ' AND ra.userid = ue.userid'
+			. ' AND (ra.roleid = ? OR ra.roleid = ? OR ra.roleid = ?)'
+			. ' AND c.idnumber = "SUBS_BROOKESID"';
+	$db_ret = $DB->get_records_sql($sql, array($user_id, $role_id_1, $role_id_2, $role_id_3));
+	if (empty($db_ret)) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
 function get_achievements($date_from, $date_to) {
     global $DB;
 	

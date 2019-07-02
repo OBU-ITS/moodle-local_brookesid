@@ -17,36 +17,42 @@
  * Brookes ID - Certificates
  *
  * @package    local_brookesid
- * @copyright  2017, Oxford Brookes University
+ * @copyright  2019, Oxford Brookes University
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
  */
 
 require_once('../../config.php');
-require_once('./db_update.php');
+require_once('./locallib.php');
 require_once('./courses_form.php');
 
-
 require_login();
-$context = context_system::instance();
-require_capability('local/brookesid:admin', $context);
 
 $home = new moodle_url('/');
-$url = $home . 'local/brookesid/index.php';
+if (!is_brookesid_authorised()) {
+	redirect($home);
+}
 
+$brookesid_course = get_brookesid_course();
+require_login($brookesid_course);
+$back = $home . 'course/view.php?id=' . $brookesid_course;
+
+$context = context_system::instance();
+$url = $home . 'local/brookesid/courses_csv.php';
 
 $PAGE->set_pagelayout('standard');
 $PAGE->set_url($url);
 $PAGE->set_context($context);
 $PAGE->set_heading($SITE->fullname);
 $PAGE->set_title(get_string('courses', 'local_brookesid'));
+$PAGE->navbar->add(get_string('courses', 'local_brookesid'));
 
 $message = '';
 
 $mform = new courses_form(null, array());
 
 if ($mform->is_cancelled()) {
-    redirect($home);
+    redirect($back);
 } 
 else if ($mform_data = $mform->get_data()) {
 	$activities = get_activities(); // Get all selected achievements
@@ -93,6 +99,5 @@ else {
 echo $OUTPUT->footer();
 
 exit();
-?>
 
-	
+?>
